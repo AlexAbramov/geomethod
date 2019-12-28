@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geomethod.Data.OracleClient", "Geomethod.Data.OracleClient.csproj", "{6B0D2249-629B-4D3D-8879-D319491C0B78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geomethod", "..\Geomethod\Geomethod.csproj", "{A61A79A7-C64C-4C3A-8FCF-CAB7A33D30C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geomethod.Data", "..\Geomethod.Data\Geomethod.Data.csproj", "{084B9904-8973-42EE-B9AD-FCDB2EF4CBAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		test|Any CPU = test|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B0D2249-629B-4D3D-8879-D319491C0B78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B0D2249-629B-4D3D-8879-D319491C0B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B0D2249-629B-4D3D-8879-D319491C0B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B0D2249-629B-4D3D-8879-D319491C0B78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B0D2249-629B-4D3D-8879-D319491C0B78}.test|Any CPU.ActiveCfg = Release|Any CPU
+		{6B0D2249-629B-4D3D-8879-D319491C0B78}.test|Any CPU.Build.0 = Release|Any CPU
+		{A61A79A7-C64C-4C3A-8FCF-CAB7A33D30C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A61A79A7-C64C-4C3A-8FCF-CAB7A33D30C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A61A79A7-C64C-4C3A-8FCF-CAB7A33D30C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A61A79A7-C64C-4C3A-8FCF-CAB7A33D30C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A61A79A7-C64C-4C3A-8FCF-CAB7A33D30C1}.test|Any CPU.ActiveCfg = test|Any CPU
+		{A61A79A7-C64C-4C3A-8FCF-CAB7A33D30C1}.test|Any CPU.Build.0 = test|Any CPU
+		{084B9904-8973-42EE-B9AD-FCDB2EF4CBAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{084B9904-8973-42EE-B9AD-FCDB2EF4CBAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{084B9904-8973-42EE-B9AD-FCDB2EF4CBAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{084B9904-8973-42EE-B9AD-FCDB2EF4CBAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{084B9904-8973-42EE-B9AD-FCDB2EF4CBAA}.test|Any CPU.ActiveCfg = test|Any CPU
+		{084B9904-8973-42EE-B9AD-FCDB2EF4CBAA}.test|Any CPU.Build.0 = test|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

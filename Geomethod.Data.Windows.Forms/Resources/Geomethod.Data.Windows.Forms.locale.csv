@@ -1,0 +1,53 @@
+﻿id;en;ru
+_mainParams;Parameters;Параметры
+_connect;Connect;Соединение с БД
+_dbsizemb;DB size (megabytes);Размер БД (мегабайт)
+_dbsize;Size;Размер
+_security;Security;Безопасность
+_integratedSecurity;Integrated security;Интегрированная безопасность
+_login;Login;Логин
+_password;Password;Пароль
+_user;User;Пользователь
+_admin;Admin;Администратор
+_createDatabase;Create database;Создать базу данных
+_createDb;Create DB;Создать БД
+_fileexists;The file already exists. Please give an unique name.;Файл с таким именем уже существует. Дайте уникальное имя файлу.
+_requiredfield;Required field;Требуемое поле
+_setSecuritySettings;Set security parameters;Установите параметры безопасности
+_serverInstance;Server instance;Экземпляр сервера
+_dbServer;Database server;Cервер базы данных
+_db;Database;БД
+_database;&Database;&База Данных
+_advanced;&Advanced;&Дополнительно
+_datastorage;Data storage;Хранение данных
+_dbfilegrowth;File growth;Приращение файла
+_dbmaxsize;Maximum size;Максимальный размер
+_wrongintegerformat;Wrong integer format;Неправильный формат целого числа
+_putpositivenumber;Put positive number;Введите положительное число
+_filepath;File Path;Файл
+_connections;Connections;Соединения
+_conn;Connection;Соединение
+_connstr;Connection String;Строка соединения
+_group;Group;Группа
+_membership;Membership;Принадлежность
+_connectToExistingDb;Сonnect to existing database;Открыть существующую базу данных
+_createNewDb;Create new database;Создать новую базу данных
+_dataProvider;Data provider;Поставщик данных
+_connFailed;Connection failed;Соединение не установлено
+_unexpectedDbSchema;Unexpected database schema;Неправильная схема базы данных
+_updateProgram;Please update the program to continue the work;Пожалуйста обновите программу для продолжения работы
+_exportToXML;Export XML;Экспорт XML
+_configurations;Configurations;Конфигурации
+_restored;Restored;Восстановлено
+_newConfigFound;A new configuration found in the database. To restore the old one restart the program.;В базе данных обнаружена новая конфигурация. Для восстановления старой конфигурации перезапустите программу.
+_areYouSureToRestoreConfig;Are you sure to restore a previous configuration and discard the current one?;Вы уверены, что хотите восстановить более раннюю конфигурацию и отменить текущую?
+_configRestored;Configuration restored;Конфигурация восстановлена
+_configNotRestored;Failed to restore the configuration;Конфигурацию не удалось восстановить
+_autoUpdate;Automatic update;Автоматическое обновление
+_configInfo;Configuration info;Информация о конфигурации
+_configComment;Comment;Комментарий об изменениях в конфигурации
+_configId;Configuration Id;Номер конфигурации
+_restoredId;Restored Id;Номер восстановленной конфигурации
+_configVersion;Copnfiguration version;Версия схемы
+_configDate;Date;Дата изменения
+_comment;Comment;Комментарий

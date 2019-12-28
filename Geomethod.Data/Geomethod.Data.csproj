@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{084B9904-8973-42EE-B9AD-FCDB2EF4CBAA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Geomethod.Data</RootNamespace>
+    <AssemblyName>Geomethod.Data</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'test|AnyCPU' ">
+    <OutputPath>bin\test\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Schemas\Binder.cs" />
+    <Compile Include="Schemas\Interfaces.cs" />
+    <Compile Include="Schemas\DataSchema.cs" />
+    <Compile Include="Schemas\ColumnSchema.cs" />
+    <Compile Include="Schemas\TableSchema.cs" />
+    <Compile Include="Schemas\DataSetSchema.cs" />
+    <Compile Include="DataProviders\AccessProvider.cs" />
+    <Compile Include="DataProviders\DbCreationProperties.cs" />
+    <Compile Include="DataProviders\ConnectionFactory.cs" />
+    <Compile Include="DataProviders\GmProviders.cs" />
+    <Compile Include="DataSet\GmDataColumn.cs" />
+    <Compile Include="DataSet\GmDataTable.cs" />
+    <Compile Include="DataSet\GmDataSet.cs" />
+    <Compile Include="DataProviders\GmProviderFactory.cs" />
+    <Compile Include="DataSet\RestructurizationTransaction.cs" />
+    <Compile Include="DataSet\SQLMappingUtils.cs" />
+    <Compile Include="Proxy\ConfigRecord.cs" />
+    <Compile Include="Proxy\IdProxyFactory.cs" />
+    <Compile Include="Proxy\GmProxyFactory.cs" />
+    <Compile Include="Proxy\DbInfo.cs" />
+    <Compile Include="Proxy\IdProxy.cs" />
+    <Compile Include="Proxy\GmProxy.cs" />
+    <Compile Include="Proxy\DbXmlInfo.cs" />
+    <Compile Include="Proxy\IdStatusProxyFactory.cs" />
+    <Compile Include="Update\UpdateScript.cs" />
+    <Compile Include="Utils\ConnectionInfo.cs" />
+    <Compile Include="Utils\ConnectionsInfo.cs" />
+    <Compile Include="Wrappers\GmTransaction.cs" />
+    <Compile Include="Utils\ImportTable.cs" />
+    <Compile Include="Proxy\IdStatusProxy.cs" />
+    <Compile Include="Proxy\UpdateInfo.cs" />
+    <Compile Include="Update\UpdateScripts.cs" />
+    <Compile Include="Utils\CommandCache.cs" />
+    <Compile Include="Wrappers\GmCommand.cs">
+    </Compile>
+    <Compile Include="Wrappers\GmConnection.cs" />
+    <Compile Include="Proxy\IdGenerator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DataProviders\SqlServerProvider.cs" />
+    <Compile Include="Utils\SqlLog.cs" />
+    <Compile Include="Utils\SqlQueries.cs" />
+    <Compile Include="Utils\Constants.cs" />
+    <Compile Include="Utils\Utils.cs" />
+    <Compile Include="Utils\DataTableUtils.cs" />
+    <Compile Include="Wrappers\GmDataReader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="TextFile1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Geomethod\Geomethod.csproj">
+      <Project>{a61a79a7-c64c-4c3a-8fcf-cab7a33d30c1}</Project>
+      <Name>Geomethod</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

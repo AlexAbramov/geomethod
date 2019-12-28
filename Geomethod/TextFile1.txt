@@ -1,0 +1,133 @@
+---
+
+		#region Fields
+		#endregion
+
+		#region Properties
+		#endregion
+
+		#region Construction
+		#endregion
+
+		#region Methods
+		#endregion
+
+		#region Utils
+		#endregion
+
+		#region Execute
+		#endregion
+
+		#region Parameters
+		#endregion
+
+---
+
+		public Dictionary<string, string> queries = new Dictionary<string, string>();
+
+
+/*		public static string[] Split(string s,string sep)
+		{
+			StringCollection sc = new StringCollection();
+			if(sep.Length==0||s.Length==0) sc.Add(s);
+			else
+			{
+				int pos=0;
+				while(pos>=0)
+				{
+					int prevPos=pos;
+					pos=s.IndexOf(sep,pos);
+					if(pos<0)
+					{
+						sc.Add(s.Substring(prevPos));
+						break;
+					}
+					else
+					{
+						sc.Add(s.Substring(prevPos,pos-prevPos));
+						pos+=sep.Length;
+					}
+				}
+			}
+			return (string[])sc;
+		}*/
+
+	public class LocalizationKeyNotFoundException : GeomethodException
+	{
+		public LocalizationKeyNotFoundException(string msg) : base(msg) { }
+	}
+
+
+	public class StringSet
+	{
+		const string strNotFoundKey="stringnotfound";
+		public const string localizationFileToken="lc";
+		public const int curVersion=1;
+		public const int maxCount=1<<18;
+		Hashtable items;
+		string fileName;
+
+		public StringSet(string filePath)
+		{
+		}
+
+		public string Get(string id)
+		{
+			string res=null;
+			if(items==null) throw new Exception("String set not loaded.");
+			res=items[id] as string;
+			if(res==null)
+			{
+				string msg=items[strNotFoundKey] as string;
+				if(msg==null) msg="String not found";
+				Log.Error(msg+": "+id,strNotFoundKey);
+				res=id;
+			}
+			return res;
+		}
+	}
+
+		public void Load(string fileName, string language)
+		{
+			string filePathPrefix=Utils.BaseDirectory+"Locale\\"+fileName;
+			language=language.Trim().ToLower();
+			string filePath;
+			if(language.StartsWith("auto"))
+			{
+				language=Thread.CurrentThread.CurrentCulture.EnglishName.ToLower();
+				filePath=filePathPrefix+'.'+language+".lc";
+				if(!File.Exists(filePath))
+				{
+					Log.Warning("File not found: "+filePath,"filenotfound");
+					language="english";
+					filePath=filePathPrefix+'.'+language+".lc";
+				}
+			}
+			else filePath=filePathPrefix+'.'+language+".lc";
+			if(ss!=null) throw new Exception("Locale already loaded.");
+			ss=new StringSet(filePath);
+			Locale.language=language;
+		}
+		void Init()
+		{
+			fileName = Path.GetFileName(filePath);
+			using (StreamReader sr = new StreamReader(filePath))
+			{
+				using (BinaryReader br = new BinaryReader(sr.BaseStream, Encoding.UTF8))
+				{
+					if (br.ReadString() != localizationFileToken) throw new Exception("Wrong file format: " + fileName);
+					int ver = br.ReadInt32();
+					int count = br.ReadInt32();
+					if (count < 0 || count > maxCount) throw new Exception("Line count limit exceeded: " + count.ToString());
+					items = new Hashtable(count);
+					string key;
+					string val;
+					while (br.BaseStream.Position < br.BaseStream.Length)
+					{
+						key = br.ReadString();
+						val = br.ReadString();
+						items.Add(key, val);
+					}
+				}
+			}
+		}

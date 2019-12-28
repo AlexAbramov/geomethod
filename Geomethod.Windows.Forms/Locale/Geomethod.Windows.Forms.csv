@@ -1,0 +1,51 @@
+﻿id;english;russian
+_close;&Close;&Закрыть
+stringnotfound;String not found;Строка не найдена
+_progver;Version;Версия
+_version;Version;Версия
+_CLR_Version;CLR;Версия CLR
+_gmcopyright;© 2008 Alexander Abramov, MIT license;© 2008 Alexander Abramov, MIT license
+_gmurl;https://github.com/AlexAbramov/geomethod;https://github.com/AlexAbramov/geomethod
+ltinfo;Info;Информация
+ltwarning;Warning;Внимание
+lterror;Error;Ошибка
+ltexception;Exception;Исключительная ситуация
+_details;&Details;&Подробнее
+_hidedetails;&Brief;&Кратко
+_report;&Report;&Отчет
+_ignore;&Ignore;&Игнорировать
+_name;&Name;&Имя
+_ok;&Ok;&OK
+_cancel;&Cancel;&Закрыть
+_file;&File;&Файл
+_new;&New;Со&здать
+_open;&Open;&Открыть
+_save;&Save;&Сохранить
+_saveas;Save &As;Со&хранить как
+_exit;E&xit;В&ыход
+_tools;&Tools;&Сервис
+_options;&Options;&Параметры
+_about;&About;&О программе
+_help;&Help;&Помощь
+_window;&Window;&Окна
+_cascade;&Cascade;&Каскадом
+_tilehor;Tile &Horizontal;&Горизонтально
+_tilever;Tile &Vertical;&Вертикально
+_contents;&Contents;&Содержание
+_import;&Import;&Импорт
+_export;&export;&Экспорт
+_view;&View;&Вид
+_print;&Print;&Печать
+_edit;&Edit;&Редактировать
+_search;&Search;&Поиск
+_add;&Add;&Добавить
+_remove;&Remove;Удалить
+_props;&Properties;&Свойства
+_language;Language;Язык
+_languagedescr;Language for the program interface and messages.;Язык для интерфейса и сообщений программы.
+_misc;Misc;Разное
+_properties;Properties;Свойства
+_update;&Update;&Обновить
+_rename;&Rename;&Переименовать
+_clear;&Clear;&Очистить
+_savechanges;Would you like to save changes?;Сохранить изменения?

@@ -1,0 +1,12 @@
+			else if(ctl is Button)
+			{
+				((Button)ctl).FlatStyle=FlatStyle.System;
+			}
+			else if(ctl is Label)
+			{
+				((Label)ctl).FlatStyle=FlatStyle.System;
+			}
+			else if(ctl is LinkLabel)
+			{
+				((LinkLabel)ctl).FlatStyle=FlatStyle.System;
+			}
