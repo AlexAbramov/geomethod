@@ -1,3 +1,63 @@
+TODO:
+
+   
+        public string AssemblyProduct
+        {
+            get
+            {
+                if (assemblyProduct == null)
+                {
+                    // Get all Product attributes on this assembly
+                    var attribute = assembly.GetCustomAttribute<AssemblyProductAttribute>();
+                    // If there aren't any Product attributes, return an empty string
+                    assemblyProduct = attributes.Length == 0 ? "" : ((AssemblyProductAttribute)attributes.).Product;
+                    // If there is a Product attribute, return its value
+                }
+                return assemblyProduct;
+            }
+        }
+
+
+			PropertyInfo pi = type.GetRuntimeProperty("Id");
+			type.GetRuntimeField
+
+
+		public static string Serialize(object obj, Encoding encoding)
+		{
+			XmlSerializer xs = new XmlSerializer(obj.GetType());
+			MemoryStream ms = new MemoryStream();
+			using (TextWriter writer = new StreamWriter(ms, encoding))
+			{
+				xs.Serialize(writer, obj, GetEmptyXSN());
+			}
+            var bytes = ms.ToArray();
+            return encoding.GetString(bytes,0, bytes.Length);
+		}
+
+
+		public static string Serialize(object obj, Encoding encoding)
+		{
+			XmlSerializer xs = new XmlSerializer(obj.GetType());
+			MemoryStream ms = new MemoryStream();
+			using (TextWriter writer = new StreamWriter(ms, encoding))
+			{
+				xs.Serialize(writer, obj, GetEmptyXSN());
+			}
+            var bytes = ms.ToArray();
+            return encoding.GetString(bytes,0, bytes.Length);
+		}
+
+
+		public static object DeserializeFile(Type type, string filePath, Encoding encoding)
+		{
+			XmlSerializer xs = new XmlSerializer(type);
+			using (var reader = new StreamReader (filePath, encoding))
+			{
+				return xs.Deserialize(reader);
+			}
+		}
+
+
 ---
 
 		#region Fields

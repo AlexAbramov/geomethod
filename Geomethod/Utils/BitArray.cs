@@ -16,14 +16,14 @@ namespace Geomethod
 		public bool NonEmpty{get{return data!=0;}}
 		public static implicit operator int(BitArray32 ba){return (int)ba.Data;}
 		public static implicit operator BitArray32(int i){return new BitArray32(i);}
-	}
+    }
 
 	public struct BitArray64
 	{
 		long data;
 		public BitArray64(long data){this.data=data;}
-		public bool this[int i]{get{return (data&1<<i)==1<<i;} set{data^=1<<i;}}
-		public long Data{get{return data;}set{data=value;}}
+        public bool this[int i] { get { long l = 1L << i; return (data & l) == l; } set { long l = 1L << i; data |= l; if (!value) data ^= l; } }
+        public long Data{get{return data;}set{data=value;}}
 		public void Clear(){data=0;}
 		public bool IsEmpty{get{return data==0;}}
 		public bool NonEmpty{get{return data!=0;}}

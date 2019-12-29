@@ -12,8 +12,8 @@ namespace Geomethod
 	{
 		enum QuotationStatus{None,First,Second};
 
-		#region Fields
-		char sepToken;
+        #region Fields
+        readonly char sepToken;
 		const char quoteToken='"';
 		static readonly string quoteTokenStr=quoteToken.ToString();
 		static readonly string quoteTokenDblStr=quoteTokenStr+quoteTokenStr;
